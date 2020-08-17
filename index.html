@@ -5,16 +5,18 @@
     <meta charset="UTF-8">
     <title>𝐏𝐋𝐄𝐀𝐒𝐄 𝐒𝐓𝐀𝐍𝐃 𝐁𝐘</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
     <style>
         body {
             background: black;
             margin: 0;
         }
+        video {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-<video id="psb" width="100%" autoplay loop muted>
+<video width="100%" autoplay loop muted onclick="playAudio()">
     <source src="psb.mp4" type="video/mp4">
 </video>
 <audio id="music" loop>
@@ -22,11 +24,9 @@
 </audio>
 <script>
     var audio = document.getElementById("music");
-    var video = document.getElementById("psb");
-    video.style.cursor = "pointer";
-    $(video).on("click", function (e) {
+    function playAudio() {
         if (audio.pause) audio.play();
-    });
+    }
 </script>
 </body>
 </html>
