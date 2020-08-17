@@ -19,6 +19,7 @@
 </video>
 <script>
     var video = document.getElementById("psb");
+    video.style.cursor = "pointer";
     $(video).on("click", function (e) {
         if (video.muted) video.muted = !video.muted;
     });
