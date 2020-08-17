@@ -20,9 +20,8 @@
 <video width="100%" autoplay loop muted onclick="playAudio()">
     <source src="psb.mp4" type="video/mp4">
 </video>
-<audio id="music" loop>
-    <source src="The_Ink_Spots_-_Maybe.mp3" type="audio/mpeg">
-</audio>
+<audio id="music" onended="playNext()"></audio>
+
 <script>
     var playlist = [
         'The_Ink_Spots_-_Maybe.mp3',
@@ -34,8 +33,17 @@
 
     var audio = document.getElementById("music");
 
-    window.onload = function() {
+    function randomTrack() {
         audio.src = playlist[Math.floor(Math.random() * playlist.length)];
+    }
+
+    function playNext() {
+        randomTrack();
+        audio.play();
+    }
+
+    window.onload = function () {
+        randomTrack();
     };
 
     function playAudio() {
