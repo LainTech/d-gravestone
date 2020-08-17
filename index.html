@@ -40,21 +40,13 @@
 
     var audio = document.getElementById("music");
 
-    function randomTrack() {
-        audio.src = playlist[Math.floor(Math.random() * playlist.length)];
-    }
-
     function playNext() {
-        randomTrack();
+        audio.src = playlist[Math.floor(Math.random() * playlist.length)];
         audio.play();
     }
 
-    window.onload = function () {
-        randomTrack();
-    };
-
     function playAudio() {
-        if (audio.pause) audio.play();
+        if (audio.paused) playNext();
     }
 </script>
 </body>
