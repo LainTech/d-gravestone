@@ -10,6 +10,7 @@
             background: black;
             margin: 0;
         }
+
         video {
             cursor: pointer;
         }
@@ -23,7 +24,17 @@
     <source src="The_Ink_Spots_-_Maybe.mp3" type="audio/mpeg">
 </audio>
 <script>
+    var playlist = [
+        'The_Ink_Spots_-_Maybe.mp3',
+        'Sidewalks_and_Skeletons_-_Underwater_Sun.mp3'
+    ];
+
     var audio = document.getElementById("music");
+
+    window.onload = function() {
+        audio.src = playlist[Math.floor(Math.random() * playlist.length)];
+    };
+
     function playAudio() {
         if (audio.pause) audio.play();
     }
