@@ -4,18 +4,26 @@
     <meta charset="UTF-8">
     <title>𝐏𝐋𝐄𝐀𝐒𝐄 𝐒𝐓𝐀𝐍𝐃 𝐁𝐘</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
     <style>
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
         body {
-            background: black
+            background: black;
+            margin: 0;
+        }
+        .center {
+            margin: auto;
         }
     </style>
 </head>
 <body>
-<img src="index.jpg" alt="Logo">
+<video id="psb" class="center" width="100%" autoplay loop muted="muted">
+    <source src="PSB.mp4" type="video/mp4">
+</video>
+<script>
+    var video = document.getElementById("psb");
+    $(video).on("click", function (e) {
+        if (video.muted) video.muted = !video.muted;
+    });
+</script>
 </body>
 </html>
