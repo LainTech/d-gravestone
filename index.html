@@ -14,9 +14,32 @@
         video {
             cursor: pointer;
         }
+
+        .rflink {
+            position: absolute;
+            bottom: 10%;
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 50%);
+        }
+
+        .rflink a {
+            color: white;
+            text-shadow: 0 0 10px black;
+            font-size: 72px;
+            font-family: impact, "noto sans mono", sans-serif;
+        }
+
+        .rflink a:hover {
+            color: #ddd;
+        }
     </style>
 </head>
 <body>
+<div class="rflink">
+    <a href="//rf.dobrochan.net">ДОБРОУБЕЖИЩЕ</a>
+</div>
 <video width="100%" autoplay loop muted onclick="playAudio()">
     <source src="psb_ch_compressed.mp4" type="video/mp4">
 </video>
